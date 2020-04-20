@@ -41,6 +41,12 @@
         "options": {
           "version": "11"
         }
+      },
+      {
+        "plan": "papertrail:choklad"
+      },
+      {
+        "plan": "newrelic:wayne"
       }
     ]
   }
