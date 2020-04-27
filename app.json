@@ -13,7 +13,7 @@
     "stack": "container",
     "env": {
       "DOMAIN_NAME": {
-        "required": "false",
+        "required": false,
         "description": "Your app URL - [name of app].herokuapp.com / example.com / abc.example.com, if you don't need WEBHOOK_TUNNEL_URL no need to set this field"
       },
       "N8N_ENCRYPTION_KEY": {
@@ -25,22 +25,22 @@
         "value": "https"
       },
       "N8N_BASIC_AUTH_ACTIVE": {
-        "required": "false",
+        "required": false,
         "description": "Protect n8n setup with basic authentication.",
         "value": "true"
       },
       "GENERIC_TIMEZONE": {
-        "required": "false",
+        "required": false,
         "description": "Time Zone to use with Heroku. You can find the name of your timezone here: https://momentjs.com/timezone/",
         "value": "Europe/Berlin"
       },
       "N8N_BASIC_AUTH_USER": {
-        "required": "false",
+        "required": false,
         "description": "Basic Authentication User for n8n",
         "value": "user"
       },
       "N8N_BASIC_AUTH_PASSWORD": {
-        "required": "false",
+        "required": false,
         "description": "Basic Authentication Password to secure n8n.",
         "value": "pass"
       }
