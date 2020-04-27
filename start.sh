@@ -8,6 +8,7 @@ if [ "$DOMAIN_NAME" ]
 then 
 	# assign to a variable
 	PRE_DOMAIN_NAME="$DOMAIN_NAME"
+	N8N_PROTOCOL="https"
 	
 	# Remove protocol if present
 	PRE_DOMAIN_NAME="${PRE_DOMAIN_NAME#http://}"

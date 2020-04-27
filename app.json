@@ -20,14 +20,9 @@
         "description": "N8N Encryption Key, DON'T USE DEFAULT",
         "generator": "secret"
       },
-      "N8N_PROTOCOL": {
-        "description": "N8N protocol, required for WEBHOOK_TUNNEL_URL",
-        "value": "https"
-      },
       "N8N_BASIC_AUTH_ACTIVE": {
         "required": false,
-        "description": "Protect n8n setup with basic authentication.",
-        "value": "true"
+        "description": "Protect n8n setup with basic authentication, set 'true' to enable or leave blank"
       },
       "GENERIC_TIMEZONE": {
         "required": false,
@@ -36,13 +31,11 @@
       },
       "N8N_BASIC_AUTH_USER": {
         "required": false,
-        "description": "Basic Authentication User for n8n",
-        "value": "user"
+        "description": "Basic Authentication User for n8n, leave blank if not needed"
       },
       "N8N_BASIC_AUTH_PASSWORD": {
         "required": false,
-        "description": "Basic Authentication Password to secure n8n.",
-        "value": "pass"
+        "description": "Basic Authentication Password to secure n8n, leave blank if not needed"
       }
     },
     "formation": {
