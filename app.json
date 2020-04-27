@@ -13,8 +13,8 @@
     "stack": "container",
     "env": {
       "DOMAIN_NAME": {
-        "description": "Your app URL - [name of app].herokuapp.com / example.com / abc.example.com, if you don't need WEBHOOK_TUNNEL_URL no need to set this field",
-        "required": "false"
+        "required": "false",
+        "description": "Your app URL - [name of app].herokuapp.com / example.com / abc.example.com, if you don't need WEBHOOK_TUNNEL_URL no need to set this field"
       },
       "N8N_ENCRYPTION_KEY": {
         "description": "N8N Encryption Key, DON'T USE DEFAULT",
@@ -25,24 +25,24 @@
         "value": "https"
       },
       "N8N_BASIC_AUTH_ACTIVE": {
+        "required": "false",
         "description": "Protect n8n setup with basic authentication.",
-        "value": "true",
-        "required": "false"
+        "value": "true"
       },
       "GENERIC_TIMEZONE": {
+        "required": "false",
         "description": "Time Zone to use with Heroku. You can find the name of your timezone here: https://momentjs.com/timezone/",
-        "value": "Europe/Berlin",
-        "required": "false"
+        "value": "Europe/Berlin"
       },
       "N8N_BASIC_AUTH_USER": {
+        "required": "false",
         "description": "Basic Authentication User for n8n",
-        "value": "user",
-        "required": "false"
+        "value": "user"
       },
       "N8N_BASIC_AUTH_PASSWORD": {
+        "required": "false",
         "description": "Basic Authentication Password to secure n8n.",
-        "value": "pass",
-        "required": "false"
+        "value": "pass"
       }
     },
     "formation": {
