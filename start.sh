@@ -3,25 +3,33 @@
 # check if port variable is set or go with default
 if [ -z ${PORT+x} ]; then echo "PORT variable not defined, leaving N8N to default port."; else export N8N_PORT=$PORT; echo "N8N will start on '$PORT'"; fi
 
-# assign to a variable
-PRE_DOMAIN_NAME="$DOMAIN_NAME"
 
-# Remove protocol if present
-PRE_DOMAIN_NAME="${PRE_DOMAIN_NAME#http://}"
-PRE_DOMAIN_NAME="${PRE_DOMAIN_NAME#https://}"
+if [ "$DOMAIN_NAME" ]
+then 
+	# assign to a variable
+	PRE_DOMAIN_NAME="$DOMAIN_NAME"
+	
+	# Remove protocol if present
+	PRE_DOMAIN_NAME="${PRE_DOMAIN_NAME#http://}"
+	PRE_DOMAIN_NAME="${PRE_DOMAIN_NAME#https://}"
+	
+	# Remove username and/or username:password part of URL
+	PRE_DOMAIN_NAME="${PRE_DOMAIN_NAME#*:*@}"
+	PRE_DOMAIN_NAME="${PRE_DOMAIN_NAME#*@}"
+	
+	# Remove rest
+	PRE_DOMAIN_NAME=${PRE_DOMAIN_NAME%%/*}
+	
+	# Stripped Domain Name
+	STRIPPED_DOMAIN_NAME="$PRE_DOMAIN_NAME"
+	
+	# add WEBHOOK_TUNNEL_URL to environment
+	export WEBHOOK_TUNNEL_URL="$N8N_PROTOCOL://$STRIPPED_DOMAIN_NAME/"
 
-# Remove username and/or username:password part of URL
-PRE_DOMAIN_NAME="${PRE_DOMAIN_NAME#*:*@}"
-PRE_DOMAIN_NAME="${PRE_DOMAIN_NAME#*@}"
+else
+    echo "no domain name set"
+fi
 
-# Remove rest
-PRE_DOMAIN_NAME=${PRE_DOMAIN_NAME%%/*}
-
-# Stripped Domain Name
-STRIPPED_DOMAIN_NAME="$PRE_DOMAIN_NAME"
-
-# add WEBHOOK_TUNNEL_URL to environment
-export WEBHOOK_TUNNEL_URL="$N8N_PROTOCOL://$STRIPPED_DOMAIN_NAME/"
 
 # regex function
 parse_url() {

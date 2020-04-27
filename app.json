@@ -13,32 +13,36 @@
     "stack": "container",
     "env": {
       "DOMAIN_NAME": {
-        "description": "Your app URL - appname.heroku.com / example.com / abc.example.com",
-        "value": "YOUR_APP_NAME.herokuapp.com"
+        "description": "Your app URL - [name of app].herokuapp.com / example.com / abc.example.com, if you don't need WEBHOOK_TUNNEL_URL no need to set this field",
+        "required": "false"
       },
       "N8N_ENCRYPTION_KEY": {
         "description": "N8N Encryption Key, DON'T USE DEFAULT",
         "generator": "secret"
       },
       "N8N_PROTOCOL": {
-        "description": "Your app URL",
+        "description": "N8N protocol, required for WEBHOOK_TUNNEL_URL",
         "value": "https"
       },
       "N8N_BASIC_AUTH_ACTIVE": {
         "description": "Protect n8n setup with basic authentication.",
-        "value": "true"
+        "value": "true",
+        "required": "false"
       },
       "GENERIC_TIMEZONE": {
         "description": "Time Zone to use with Heroku. You can find the name of your timezone here: https://momentjs.com/timezone/",
-        "value": "Europe/Berlin"
+        "value": "Europe/Berlin",
+        "required": "false"
       },
       "N8N_BASIC_AUTH_USER": {
         "description": "Basic Authentication User for n8n",
-        "value": "user"
+        "value": "user",
+        "required": "false"
       },
       "N8N_BASIC_AUTH_PASSWORD": {
         "description": "Basic Authentication Password to secure n8n.",
-        "value": "pass"
+        "value": "pass",
+        "required": "false"
       }
     },
     "formation": {
