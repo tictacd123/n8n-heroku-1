@@ -18,7 +18,7 @@
       },
       "N8N_ENCRYPTION_KEY": {
         "description": "N8N Encryption Key, DON'T USE DEFAULT",
-        "value": "AnyThingYouLike"
+        "generator": "secret"
       },
       "N8N_PROTOCOL": {
         "description": "Your app URL",
