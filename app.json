@@ -7,38 +7,35 @@
       "automation"
     ],
     "website": "https://n8n.io",
-    "repository": "https://github.com/sarveshwarge/n8n-heroku",
+    "repository": "https://github.com/startplanting/n8n-heroku",
     "logo": "https://raw.githubusercontent.com/n8n-io/n8n/master/docs/images/n8n-logo.png",
     "success_url": "/",
     "stack": "container",
     "env": {
       "DOMAIN_NAME": {
-        "description": "Your app URL - appname.heroku.com / example.com / abc.example.com",
-        "value": "YOUR_APP_NAME.herokuapp.com"
+        "required": false,
+        "description": "Your app URL - [name of app].herokuapp.com / example.com / abc.example.com, if you don't need WEBHOOK_TUNNEL_URL no need to set this field"
       },
       "N8N_ENCRYPTION_KEY": {
         "description": "N8N Encryption Key, DON'T USE DEFAULT",
-        "value": "AnyThingYouLike"
-      },
-      "N8N_PROTOCOL": {
-        "description": "Your app URL",
-        "value": "https"
+        "generator": "secret"
       },
       "N8N_BASIC_AUTH_ACTIVE": {
-        "description": "Protect n8n setup with basic authentication.",
-        "value": "true"
+        "required": false,
+        "description": "Protect n8n setup with basic authentication, set 'true' to enable or leave blank"
       },
       "GENERIC_TIMEZONE": {
+        "required": false,
         "description": "Time Zone to use with Heroku. You can find the name of your timezone here: https://momentjs.com/timezone/",
         "value": "Europe/Berlin"
       },
       "N8N_BASIC_AUTH_USER": {
-        "description": "Basic Authentication User for n8n",
-        "value": "user"
+        "required": false,
+        "description": "Basic Authentication User for n8n, leave blank if not needed"
       },
       "N8N_BASIC_AUTH_PASSWORD": {
-        "description": "Basic Authentication Password to secure n8n.",
-        "value": "pass"
+        "required": false,
+        "description": "Basic Authentication Password to secure n8n, leave blank if not needed"
       }
     },
     "formation": {
