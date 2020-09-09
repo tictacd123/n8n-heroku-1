@@ -1,6 +1,6 @@
 # n8n-heroku
 
-![Docker](https://github.com/Plant-for-the-Planet-org/n8n-heroku-integration/workflows/Docker/badge.svg) ![Test Heroku](https://github.com/Plant-for-the-Planet-org/n8n-heroku-integration/workflows/Heroku/badge.svg)
+![Docker](https://github.com/Plant-for-the-Planet-org/n8n-heroku/workflows/Docker/badge.svg) ![Test Heroku](https://github.com/Plant-for-the-Planet-org/n8n-heroku/workflows/Heroku/badge.svg)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Plant-for-the-Planet-org/n8n-heroku)
 
